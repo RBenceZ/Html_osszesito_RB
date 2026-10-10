@@ -84,5 +84,87 @@
             </tr>
         </tbody>
     </table>
+
+    <h2 id="jelentkezes">Jelentkezési űrlap</h2>
+    <form action="https://httpbin.org/post" method="POST">
+        <fieldset>
+            <legend>Személyes adatok</legend>
+            
+            <p>
+                <label for="nev">Név:</label><br>
+                <input type="text" id="nev" name="nev" required>
+            </p>
+
+            <p>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required>
+            </p>
+
+            <p>
+                <label for="telefon">Telefon:</label><br>
+                <input type="tel" id="telefon" name="telefon" placeholder="+36 30 123 4567">
+            </p>
+
+            <p>
+                <label for="letszam">Hány fővel jössz (magadat is beleértve):</label><br>
+                <input type="number" id="letszam" name="letszam" value="1" min="1" max="4" required>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Melyik buszra ülsz?</legend>
+            
+            <p>
+                <input type="radio" id="busz1" name="busz" value="1-es busz" checked>
+                <label for="busz1">1-es számú busz</label>
+            </p>
+            <p>
+                <input type="radio" id="busz2" name="busz" value="2-es busz">
+                <label for="busz2">2-es számú busz</label>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Egyéb</legend>
+            
+            <p>
+                <label for="etkezes">Étkezés:</label><br>
+                <select id="etkezes" name="etkezes" required>
+                    <option value="">-- válassz --</option>
+                    <option value="husos">húsos menü</option>
+                    <option value="vegetarianus">vegetáriánus menü</option>
+                    <option value="hozok">hozok magamnak ételt</option>
+                </select>
+            </p>
+
+            <p>Extra program:</p>
+            <p>
+                <input type="checkbox" id="extra1" name="extra_program[]" value="varlatogatas">
+                <label for="extra1">Várlátogatás</label>
+            </p>
+            <p>
+                <input type="checkbox" id="extra2" name="extra_program[]" value="setahajozas">
+                <label for="extra2">Sétahajózás a Tiszán</label>
+            </p>
+
+            <p>
+                <label for="megjegyzes">Megjegyzés:</label><br>
+                <textarea id="megjegyzes" name="megjegyzes" rows="4"></textarea>
+            </p>
+        </fieldset>
+
+        <p>
+            <input type="checkbox" id="szulo" name="szulo_tud_rola" value="igen" required>
+            <label for="szulo">A szülő tud a kirándulásról</label>
+        </p>
+
+        <p>
+            <button type="submit">Jelentkezem</button>
+        </p>
+    </form>
+
+    <footer>
+        <p>&copy; 2026 Radics Bence</p>
+    </footer>
 </body>
 </html>
